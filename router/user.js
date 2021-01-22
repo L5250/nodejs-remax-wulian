@@ -177,7 +177,6 @@ router.get('/updatePassword', (req, res) => {
                     conn.query(userSQL.updateUser, [{
                         password: user.newPassword
                     }, user.username], (err, result) => {
-                        console.log(err)
                         if (result) {
                             _data = {
                                 msg: '密码修改成功'
